@@ -1,0 +1,29 @@
+{
+  "name": "mark2ubb",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "mark2ubb": "./src/cli.mjs"
+  },
+  "scripts": {
+    "demo": "node src/cli.mjs ./test/fixtures/balun1-4.md --image-base-url https://example.com/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1",
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.11",
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^25.0.8",
+    "@vitest/coverage-v8": "^4.0.17",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.17"
+  },
+  "dependencies": {
+    "commander": "^14.0.2",
+    "markdown-it": "^14.1.0",
+    "markdown-it-mathjax3": "^5.2.0"
+  }
+}
