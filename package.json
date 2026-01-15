@@ -6,7 +6,7 @@
     "mark2ubb": "./src/cli.mjs"
   },
   "scripts": {
-    "demo": "node src/cli.mjs ./test/fixtures/balun1-4.md --image-base-url https://example.com/"
+    "demo": "node src/cli.mjs ./test/fixtures/demo.md --image-base-url https://example.com/"
   },
   "keywords": [],
   "author": "",

@@ -191,10 +191,10 @@ export function markdownToUBB(markdown, options = {}) {
         break
 
       case 'th_open':
-        output += '[th]'
+        output += '[td][align=center][b]'
         break
       case 'th_close':
-        output += '[/th]'
+        output += '[/b][/align][/td]'
         break
 
       case 'td_open':
@@ -202,6 +202,14 @@ export function markdownToUBB(markdown, options = {}) {
         break
       case 'td_close':
         output += '[/td]'
+        break
+      // ---------- math ----------
+      case 'math_inline':
+        output += `[math]${token.content}[/math]`
+        break
+
+      case 'math_block':
+        output += `[math]\n${token.content}\n[/math]\n\n`
         break
       // =====================
       // inline 内容
