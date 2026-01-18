@@ -10,7 +10,7 @@
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:coverage": "vitest --coverage",
-    "test:ci": "vitest --ci --coverage --watchAll=false",
+    "test:ci": "vitest --coverage --watchAll=false",
     "test:mdd": "vitest ./test/mdd.test.mjs",
     "demo": "node src/cli.mjs ./test/fixtures/demo.md --image-base-url https://example.com/",
     "demo:mdd": "node src/mdd-cli.mjs ./test/fixtures/demo.md --image-base-url https://example.com/ --math2png"
