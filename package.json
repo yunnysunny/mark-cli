@@ -6,6 +6,10 @@
     "md2ubb": "./src/md2ubb-cli.mjs",
     "mdd": "./src/mdd-cli.mjs"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunnysunny/mark-cli.git"
+  },
   "scripts": {
     "test": "vitest",
     "test:watch": "vitest --watch",
