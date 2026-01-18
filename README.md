@@ -1,7 +1,7 @@
 # mark-cli
 A collection of command-line tools for processing Markdown files.
 ## Available Tools
-- `mark2ubb`: Convert Markdown files to UBB code.
+- `md2ubb`: Convert Markdown files to UBB code.
 - `mdd`: Enhanced Markdown to support math rendering and add prefix for relative links.
 
 ## Installation
@@ -10,9 +10,9 @@ You can install the tools using npm:
 npm install -g @whyun-master/mark-cli
 ```
 ## Usage
-### mark2ubb
+### md2ubb
 ```
-mark2ubb <file> [options]
+md2ubb <file> [options]
 ```
 Convert a Markdown file to UBB code.
 

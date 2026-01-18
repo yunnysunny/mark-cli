@@ -1,9 +1,9 @@
 {
   "name": "@whyun-master/mark-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "bin": {
-    "mark2ubb": "./src/mark2ubb-cli.mjs",
+    "md2ubb": "./src/md2ubb-cli.mjs",
     "mdd": "./src/mdd-cli.mjs"
   },
   "scripts": {
