@@ -6,3 +6,5 @@ coverage/
 .obsidian/
 zip/
 /.env*
+*.png
+*.svg

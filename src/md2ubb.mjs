@@ -1,6 +1,6 @@
 import MarkdownIt from 'markdown-it'
 import mathjax3 from 'markdown-it-mathjax3'
-import { mathToPng } from './lib/math-to-image.mjs'
+import { mathToPng, math2PngFileSync } from './lib/math-to-image.mjs'
 
 const md = new MarkdownIt({
   html: false,
@@ -211,7 +211,12 @@ export function markdownToUBB(markdown, options = {}) {
 
 
       case 'math_block':
-        output += `[img]\n${mathToPng(token.content)}\n[/img]\n\n`
+        if (options.math2pngPath) {
+          const pathPng = math2PngFileSync(token.content, options.math2pngPath)
+          output += `[img]\n${pathPng}\n[/img]\n\n`
+        } else {
+          output += `[img]\n${mathToPng(token.content)}\n[/img]\n\n`
+        }
         break
       // =====================
       // inline 内容

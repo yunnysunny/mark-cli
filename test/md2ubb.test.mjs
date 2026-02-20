@@ -2,8 +2,7 @@
 import { describe, it } from 'vitest';
 import { markdownToUBB } from '../src/md2ubb.mjs';
 describe('markdownToUBB', () => {
-    it('basic', async () => {
-        const md = `
+    const md = `
 # Title
 Here is some *italic* text and some **bold** text. \`inline code\`
 
@@ -23,8 +22,16 @@ $$
 \\int_0^\\infty e^{-x} dx = 1
 $$
 `;
+    it('basic', async () => {
         const ubb = markdownToUBB(md, {
             relativeImageBaseUrl: 'https://example.com/assets/',
+        });
+        console.log(ubb);
+    });
+    it('math2pngPath', async () => {
+        const ubb = markdownToUBB(md, {
+            relativeImageBaseUrl: 'https://example.com/assets/',
+            math2pngPath: '.',
         });
         console.log(ubb);
     });
