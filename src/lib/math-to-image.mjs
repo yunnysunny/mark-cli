@@ -10,6 +10,12 @@ import { SVG } from 'mathjax-full/js/output/svg.js'
 import { liteAdaptor } from 'mathjax-full/js/adaptors/liteAdaptor.js'
 import { RegisterHTMLHandler } from 'mathjax-full/js/handlers/html.js'
 
+import { fileURLToPath } from 'node:url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+const scriptPath = path.join(__dirname, 'sharp-process.mjs')
+
 // 1. adaptor
 const adaptor = liteAdaptor()
 RegisterHTMLHandler(adaptor)
@@ -65,7 +71,7 @@ export function math2PngFileSync(latex, basePath) {
   const pathSaved = path.join(basePath, `${filename}.svg`)
   fs.writeFileSync(pathSaved, svg)
   const pathPng = pathSaved.replace('.svg', '.png') 
-  const result = spawnSync('node_modules/.bin/sharp', ['-i', pathSaved, '-o', pathPng], {
+  const result = spawnSync(process.execPath, [scriptPath, '-i', pathSaved, '-o', pathPng], {
     encoding: 'utf-8',
     shell: true   // Windows 关键
   })

@@ -1,6 +1,6 @@
 import MarkdownIt from 'markdown-it'
 import mathjax3 from 'markdown-it-mathjax3'
-import { mathToPng } from './lib/math-to-image.mjs'
+import { mathToPng, math2PngFileSync } from './lib/math-to-image.mjs'
 
 const md = new MarkdownIt({
   html: false,
